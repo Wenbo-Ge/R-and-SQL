@@ -1,5 +1,8 @@
 # R-Language
 
+	# JavaScript practice
+	setInterval(function(){ document.getElementById('clickMe').click(); }, 240000);
+
   # Data Mining
 	R language
 	https://www.tutorialspoint.com/r/index.htm
