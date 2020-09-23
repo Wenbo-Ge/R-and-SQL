@@ -18,3 +18,13 @@
 
 	> strip_html("junk junk<a href=\"/wiki/abstraction_(mathematics)\" title=\"abstraction (mathematics)\"> junk junk")
 	[1] "junk junk junk junk"
+	
+# mutate() with ifelse() to flag certain field and create new field
+	https://rstudio-pubs-static.s3.amazonaws.com/116317_e6922e81e72e4e3f83995485ce686c14.html#/5
+	mutate(gradebook, Pass.Fail = ifelse(grade > 60, "Pass", "Fail"))
+
+# Good habit to use table("certain column") to identify anaomly with filtered result
+	i.e. filter condition is ID, then do table(data.frame$ID) to check result
+
+# Good habit to check duplicated results
+	do data.frame %>% count(field_name) %>% count(n)
