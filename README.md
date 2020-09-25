@@ -28,3 +28,7 @@
 
 # Good habit to check duplicated results
 	do data.frame %>% count(field_name) %>% count(n)
+	
+# ggplot with different group
+	ggplot(df, aes(x = column_year, y = clolumn_value, color = column_group, group=column_group)) +
+  geom_line() 
