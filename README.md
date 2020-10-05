@@ -35,3 +35,6 @@
 	
 # Excel using column value to filter another column
 	use countif function
+	
+# Use pivot_wider to generate tables
+	pivot_wider(names_from= , values_from= )
