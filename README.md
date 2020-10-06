@@ -38,3 +38,7 @@
 	
 # Use pivot_wider to generate tables
 	pivot_wider(names_from= , values_from= )
+	
+# R case_when()
+
+
