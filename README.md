@@ -41,4 +41,10 @@
 	
 # R case_when()
 
+# R coalesce() function 
+	# Or match together a complete vector from missing pieces
+	y <- c(1, 2, NA, NA, 5)
+	z <- c(NA, NA, 3, 4, 5)
+	coalesce(y, z)
+	#> [1] 1 2 3 4 5
 
