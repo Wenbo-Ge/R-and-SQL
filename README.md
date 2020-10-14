@@ -48,3 +48,7 @@
 	coalesce(y, z)
 	#> [1] 1 2 3 4 5
 
+# Right join with expand
+	summarize(..., ...) %>%
+	right_join(expand(., column1, column2) 
+	dot mean current dataframe
