@@ -52,3 +52,7 @@
 	summarize(..., ...) %>%
 	right_join(expand(., column1, column2) 
 	dot mean current dataframe
+	
+# R conditions if not working
+	rows = highlight$diff_flag==TRUE // if not working, try down below
+	rows = which(highlight$diff_flag==TRUE) // this should work
