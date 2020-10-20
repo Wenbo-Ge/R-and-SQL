@@ -56,3 +56,8 @@
 # R conditions if not working
 	rows = highlight$diff_flag==TRUE // if not working, try down below
 	rows = which(highlight$diff_flag==TRUE) // this should work
+	
+# Mannully give order to the strings in the column 
+	mutate(COL_NAME = factor(COL_NAME, levels = c("A", "B", "C"))) %>%
+	arrange(COL_NAME) %>%
+	slice(1L)
