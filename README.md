@@ -61,3 +61,16 @@
 	mutate(COL_NAME = factor(COL_NAME, levels = c("A", "B", "C"))) %>%
 	arrange(COL_NAME) %>%
 	slice(1L)
+	
+# SQL Listagg with conditions
+	two fields : dname, job
+	SELECT d.dname,   
+       	(select LISTAGG(job,', ')    
+               WITHIN GROUP (ORDER BY job)   
+          from (select unique job job, e.dname name   
+                  from scott.emp e  
+                 ) X
+		 where x.name = d.dname
+		 group by x.name
+		 ) jobs  
+  	FROM scott.dept d
