@@ -74,3 +74,8 @@
 		 group by x.name
 		 ) jobs  
   	FROM scott.dept d
+	
+# Oracle Add "commit" at end after drops
+	Drop procedure xxx;
+	Commit;
+	
