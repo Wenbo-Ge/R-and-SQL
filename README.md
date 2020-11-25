@@ -81,3 +81,4 @@
 	
 # R RegExp resource
 	https://evoldyn.gitlab.io/evomics-2018/ref-sheets/R_strings.pdf
+	https://regexr.com/
