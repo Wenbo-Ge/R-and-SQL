@@ -80,8 +80,16 @@
 	Commit;
 	
 # R RegExp resource
-	https://evoldyn.gitlab.io/evomics-2018/ref-sheets/R_strings.pdf
+	Stringr REGEX: https://evoldyn.gitlab.io/evomics-2018/ref-sheets/R_strings.pdf
+	R REGEX: https://cran.r-project.org/web/packages/stringr/vignettes/regular-expressions.html
+	You can also create your own character classes using []:
+	[abc]: matches a, b, or c.
+	[a-z]: matches every character between a and z (in Unicode code point order).
+	[^abc]: matches anything except a, b, or c.
+	[\^\-]: matches ^ or -.
+	
 	https://regexr.com/
+	
 	
 # Melt dataframe to long format table
 	lf <- melt(result, id.vars = "Col_Name", 
