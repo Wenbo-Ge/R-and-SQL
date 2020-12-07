@@ -95,3 +95,10 @@
 	lf <- melt(result, id.vars = "Col_Name", 
            variable.name = "X_Name",
            value.name="Y_Name")
+	   
+# Put 0 in the output when doing summarizing
+	group_by(variable1, variable2) %>%
+  	summarise(new_col = n(), .groups = "drop") %>%
+  	complete(variable1, variable2, fill = list(new_col = 0))
+	
+	
