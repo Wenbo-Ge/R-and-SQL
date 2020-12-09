@@ -101,4 +101,17 @@
   	summarise(new_col = n(), .groups = "drop") %>%
   	complete(variable1, variable2, fill = list(new_col = 0))
 	
+# Merge excel cell and create title for table
+	mergeCells(wb, "Output",
+           cols = 1:ncol(df_print),
+           rows = 1)
+
+	addStyle(wb, "Output",
+         cols = 1,
+         rows = 1,
+         style = createStyle(halign = "center"))
+
+	writeData(wb, "Output", "Table Title",
+          startCol = 1, startRow = 1)
+	
 	
