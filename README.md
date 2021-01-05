@@ -88,6 +88,10 @@
 	[^abc]: matches anything except a, b, or c.
 	[\^\-]: matches ^ or -.
 	
+	"\\bSELECT\\b" will match only SELECT, instead of matching SELECTED
+	"\\/\\*" will match /*
+	",\\(SELECT" will match ,(SELECT. \\ will escape (
+	
 	https://regexr.com/
 	
 	
