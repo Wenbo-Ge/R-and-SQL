@@ -91,6 +91,8 @@
 	"\\bSELECT\\b" will match only SELECT, instead of matching SELECTED
 	"\\/\\*" will match /*
 	",\\(SELECT" will match ,(SELECT. \\ will escape (
+	"^.*,\\(SELECT(?!.*\\bAS\\b).*$" string contains ,(SELECT but doesn't contains AS
+	apply(sapply(c(",\\(SELECT", " AS"), grepl, df$col),1,all) return TRUE/FALSE if string contains both SELECT and AS
 	
 	https://regexr.com/
 	
