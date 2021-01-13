@@ -120,6 +120,8 @@
 	writeData(wb, "Output", "Table Title",
           startCol = 1, startRow = 1)
 	  
+# Difference between <- <<- and =
+	use <<- to assign value in the function if no return exists in the function  
 	
 	
 	
