@@ -123,6 +123,13 @@
 # Difference between <- <<- and =
 	use <<- to assign value in the function if no return exists in the function  
 	
+# Difference between grep and grepl
+	x <- c("d", "a", "c", "abba") 
+	grep("a", x)                      
+	# 2 4
+	grepl("a", x)                     
+	# FALSE  TRUE FALSE  TRUE
+	
 	
 	
 	
