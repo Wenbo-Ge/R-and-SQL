@@ -130,6 +130,7 @@
 	grepl("a", x)                     
 	# FALSE  TRUE FALSE  TRUE
 	
-	
+# Remove unnecessary line breaks and spaces in "col_name" column
+	df_Fin$col_name <- sapply(df_Fin$col_name", function(x) { gsub("[\r\n]", " ", x) })	
 	
 	
