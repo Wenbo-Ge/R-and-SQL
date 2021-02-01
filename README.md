@@ -94,6 +94,7 @@
 	"^.*,\\(SELECT(?!.*\\bAS\\b).*$" string contains ,(SELECT but doesn't contains AS
 	apply(sapply(c(",\\(SELECT", " AS"), grepl, df$col),1,all) return TRUE/FALSE if string contains both SELECT and AS
 	
+	
 	https://regexr.com/
 	
 	
@@ -132,5 +133,6 @@
 	
 # Remove unnecessary line breaks and spaces in "col_name" column
 	df_Fin$col_name <- sapply(df_Fin$col_name", function(x) { gsub("[\r\n]", " ", x) })	
+	
 	
 	
