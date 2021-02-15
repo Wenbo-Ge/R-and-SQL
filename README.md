@@ -91,7 +91,12 @@
 	"\\bSELECT\\b" will match only SELECT, instead of matching SELECTED
 	"\\/\\*" will match /*
 	",\\(SELECT" will match ,(SELECT. \\ will escape (
-	"^.*,\\(SELECT(?!.*\\bAS\\b).*$" string contains ,(SELECT but doesn't contains AS
+	"^.*\\bCASE\\b(?!.*\\bAS\\b).*$" string contains CASE but doesn't contains AS, this is negative LOOKAHEAD
+	CASE WHEN                                       //////////// this line will be matched
+	CASE WHEN abssdad END             AS asdsad
+	"^.*(?<!\\bCASE\\b.*)\\bEND\\b.*$" string contains END but doesn't contains CASE, this is negative LOOKBEHIND
+	END                                                         AS aaaa ///// this line will be matched
+	CASE WHEN abssdad END             AS asdsad
 	apply(sapply(c(",\\(SELECT", " AS"), grepl, df$col),1,all) return TRUE/FALSE if string contains both SELECT and AS
 	
 	
