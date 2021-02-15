@@ -134,6 +134,30 @@
 # Remove unnecessary line breaks and spaces in "col_name" column
 	df_Fin$col_name <- sapply(df_Fin$col_name", function(x) { gsub("[\r\n]", " ", x) })	
 	
+# R Summaries counts
+	counts <- df %>%
+	group_by (col_1) %>%
+	summaries(appl = n(), .groups="drop")
 	
+	Easier Way:
+	counts <- df %>%
+    	count(col = col_1, name = "appl")
 	
+# Case When tips
+	case_when(
+    		factor < 5 ~ "level_1",
+    		factor < 15 ~ "level_2", // dont need to do factor >= 15 & factor < 15  
+    		factor >= 15 ~ "level_3",
+    		TRUE ~ "UNKNOWN"
+  		)
 	
+# rbind data type issue
+	last_row <- c(NA, 
+                  sum(df$data_type_is_double), 
+                  sum(df$data_type_is_double_2))
+	then, this vector is double, rbind(df, last_row) -> all column will stay double
+	
+	last_row <- c("TOTAL", 
+                  sum(df$data_type_is_double), 
+                  sum(df$data_type_is_double_2))
+	then, this vector is character, rbind(df, last_row) -> all column will stay character
