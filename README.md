@@ -91,6 +91,7 @@
 	"\\bSELECT\\b" will match only SELECT, instead of matching SELECTED
 	"\\/\\*" will match /*
 	",\\(SELECT" will match ,(SELECT. \\ will escape (
+	
 	"^.*\\bCASE\\b(?!.*\\bAS\\b).*$" string contains CASE but doesn't contains AS, this is negative LOOKAHEAD
 	CASE WHEN                                       //////////// this line will be matched
 	CASE WHEN abssdad END             AS asdsad
