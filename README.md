@@ -100,6 +100,7 @@
 	CASE WHEN abssdad END             AS asdsad
 	apply(sapply(c(",\\(SELECT", " AS"), grepl, df$col),1,all) return TRUE/FALSE if string contains both SELECT and AS
 	
+	https://javascript.info/regexp-lookahead-lookbehind
 	
 	https://regexr.com/
 	
