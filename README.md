@@ -168,3 +168,8 @@
                   sum(df$data_type_is_double), 
                   sum(df$data_type_is_double_2))
 	then, this vector is character, rbind(df, last_row) -> all column will stay character
+	
+# format date directly in openxslx
+	options("openxlsx.datetimeFormat" = "yyyy-mm-dd hh:mm:ss")
+	## custom datetime formats can be made up of any combination of:
+	## d, dd, ddd, dddd, m, mm, mmm, mmmm, mmmmm, yy, yyyy, h, hh, m, mm, s, ss, AM/PM
