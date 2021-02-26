@@ -173,3 +173,7 @@
 	options("openxlsx.datetimeFormat" = "yyyy-mm-dd hh:mm:ss")
 	## custom datetime formats can be made up of any combination of:
 	## d, dd, ddd, dddd, m, mm, mmm, mmmm, mmmmm, yy, yyyy, h, hh, m, mm, s, ss, AM/PM
+	
+# group_by tips in R with tidyverse
+  group_by(!!!syms(names(.)[names(.) != "COL_NAME"]))
+  this code will group_by every columns in dataframe except COL_NAME column
