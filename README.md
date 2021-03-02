@@ -177,3 +177,10 @@
 # group_by tips in R with tidyverse
   group_by(!!!syms(names(.)[names(.) != "COL_NAME"]))
   this code will group_by every columns in dataframe except COL_NAME column
+  
+  Warning message:
+In gsub(substr(COL_NAME, 5, 6), "01", COL_NAME) :
+  argument 'pattern' has length > 1 and only the first element will be used
+  
+  COL_NAME <- mapply(function(x)gsub(substr(x, 5,6), "01", x),
+                       COL_NAME)
