@@ -187,3 +187,5 @@ In gsub(substr(COL_NAME, 5, 6), "01", COL_NAME) :
 		       
 sprintf("blah blah blah in %s", paste(comp, collapse = ", "))
 this will print every element in comp and paste to the end of senetence
+
+difference between df$col and df["col"]
