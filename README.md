@@ -153,7 +153,7 @@
 # Case When tips
 	case_when(
     		factor < 5 ~ "level_1",
-    		factor < 15 ~ "level_2", // dont need to do factor >= 15 & factor < 15  
+    		factor < 15 ~ "level_2", // dont need to do factor >= 5 & factor < 15  
     		factor >= 15 ~ "level_3",
     		TRUE ~ "UNKNOWN"
   		)
