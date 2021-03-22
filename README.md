@@ -192,3 +192,18 @@ difference between df$col and df["col"]
 
 format date in R 
 https://www.statmethods.net/input/dates.html
+
+# R how to create following dataframe:
+	Institution     Year
+	university_1    2016
+	university_1    2017
+	university_2    2016
+	university_2    2017
+	
+	list_output <- data.frame(Institution = c("university_1", "university_2"), 
+                        	  YEAR = rep(c("2016", 
+                                     		"2017",
+                                     		"2018",
+                                     		"2019",
+                                     		"2020"), 2)) %>%
+  			arrange(A_INP_NAME, YEAR)
