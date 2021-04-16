@@ -208,4 +208,8 @@ difference between df$col and df["col"]
                                      		"2018",
                                      		"2019",
                                      		"2020"), 2)) %>%
-  			arrange(A_INP_NAME, YEAR)
+  			arrange(Institution, YEAR)
+
+# % format in excel output
+	percent <- createStyle(numFmt = "##.0 %")
+			
