@@ -212,4 +212,8 @@ difference between df$col and df["col"]
 
 # % format in excel output
 	percent <- createStyle(numFmt = "##.0 %")
+	
+# R date's type of double
+	typeof(df$date)
+	double
 			
