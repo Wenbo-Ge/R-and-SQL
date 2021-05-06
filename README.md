@@ -190,7 +190,7 @@
 	sprintf("blah blah blah in %s", paste(comp, collapse = ", "))
 	this will print every element in comp and paste to the end of senetence
 
-difference between df$col and df["col"]
+# difference between df$col and df["col"]
 
 # format date in R 
 	https://www.statmethods.net/input/dates.html
