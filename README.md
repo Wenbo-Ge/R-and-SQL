@@ -216,4 +216,8 @@
 # R date's type of double
 	typeof(df$date)
 	double
-			
+	
+# Append a totals row and/or column to a data.frame
+	janitor::adorn_totals(name = "Grant Value", fill = " ")
+	fill	 if there are non-numeric columns, what should fill the bottom row of those columns
+	name	 name of the totals row and/or column
