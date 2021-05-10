@@ -221,3 +221,10 @@
 	janitor::adorn_totals(name = "Grant Value", fill = " ")
 	fill	 if there are non-numeric columns, what should fill the bottom row of those columns
 	name	 name of the totals row and/or column
+	
+# R create Excel Sheet Format Style, differentiate row colors
+	writeDataTable(wb, "tabName", 
+               testDf,
+               # get colour banded rows
+               tableStyle = "TableStyleLight18")
+	
