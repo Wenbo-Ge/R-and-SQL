@@ -228,3 +228,8 @@
                # get colour banded rows
                tableStyle = "TableStyleLight18")
 	
+
+# R join to compare difference between two Excel
+	http://zevross.com/blog/2014/08/05/using-the-r-function-anti_join-to-find-unmatched-records/
+	# which records occur in table1 but not in table2
+	anti_join(table1, table2, by=c("state", "county"))
