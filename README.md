@@ -246,7 +246,8 @@
 		AAA, BBB, CCC	   China, US, Canada
 		
 	SQL: 
-		select A.Person_Name,
-		       get_all_countries(A.Person_Name)
-		from table_A A
+		select P.Person_Name,
+		       get_all_countries(P.Person_Name)
+		from person P
+	
 	
