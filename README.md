@@ -235,3 +235,18 @@
 	anti_join(table1, table2, by=c("state", "county"))
 	
 # R script to pull SQL fields
+
+# SQL Split single comma delimited string / or in the table into rows in Oracle
+	https://lalitkumarb.wordpress.com/2014/12/02/split-comma-delimited-string-into-rows-in-oracle/
+	https://lalitkumarb.wordpress.com/2015/03/04/split-comma-delimited-strings-in-a-table-in-oracle/
+	
+# SQL function to perform task row by row
+	Example: want to add a column that matchs person with their countries seperated by comma
+		Person_Name        Country_Name
+		AAA, BBB, CCC	   China, US, Canada
+		
+	SQL: 
+		select A.Person_Name,
+		       get_all_countries(A.Person_Name)
+		from table_A A
+	
