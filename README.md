@@ -249,5 +249,43 @@
 		select P.Person_Name,
 		       get_all_countries(P.Person_Name)
 		from person P
-	
-	
+		
+	Sample code to create function:
+
+	create or replace FUNCTION   get_all_countries
+                 (person_name_in person.person_name%TYPE)
+
+        CURSOR COUNTRY_CUR IS
+        SQL script here
+        ;
+
+	-- ---------------------------
+
+	COUNTRY_CD                country.country_cd%type;
+	CONCATE_COUNTRY_CD                  LONG := '';
+
+	BEGIN
+	   OPEN COUNTRY_CUR;
+	   LOOP
+	    FETCH COUNTRY_CUR INTO COUNTRY_CD;
+	    EXIT WHEN COUNTRY_CUR%NOTFOUND;
+
+	  IF  CONCATE_COUNTRY_CD is null THEN
+		   CONCATE_COUNTRY_CD := COUNTRY_CD ;
+	       ELSE
+		  CONCATE_COUNTRY_CD := CONCATE_COUNTRY_CD||'; '||COUNTRY_CD;
+		END IF;
+
+	   END LOOP;
+
+
+	   CLOSE COUNTRY_CUR;
+
+	RETURN CONCATE_COUNTRY_CD;
+	--
+	EXCEPTION
+		WHEN OTHERS THEN
+			CLOSE COUNTRY_CUR;
+			RAISE;
+	END;
+	-- END PL/SQL BLOCK (do not remove this line) --------------------
