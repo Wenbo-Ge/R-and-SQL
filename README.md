@@ -289,3 +289,14 @@
 			RAISE;
 	END;
 	-- END PL/SQL BLOCK (do not remove this line) --------------------
+	
+# Shiny R plot linear regression line
+	  output$plot_1 <- renderPlot({
+    		plot(women$height, women$weight, 
+         	main = "Average Women's Height vs Weight")
+	    if(input$line) {
+	 -- should be y ~ x, if x ~ y, line won't be generated
+      	model <- lm(women$weight ~ women$height, data=women)
+      	abline(model)
+    	}
+  	})
