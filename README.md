@@ -300,3 +300,13 @@
       	abline(model)
     	}
   	})
+
+# ggplot sometimes need to as.factor columns
+	- if not factored, there will be not color in the plot
+	titanic$Survived <- as.factor(titanic$Survived)
+	titanic$Sex <- as.factor(titanic$Sex)
+
+	ggplot(titanic, aes(x=Sex, fill = Survived)) +
+		theme_bw() +
+		geom_bar() +
+		labs(y = "Number of Passengers", title = "Survival Rate by Gender")
